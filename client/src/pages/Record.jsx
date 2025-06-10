@@ -124,13 +124,14 @@ function Record() {
           <div>
             <div className="mt-6 text-center">
               <div className="mb-4">
+                {/* Means Recording is Stared */}
                 {recording && (
                   <p className="text-lg font-semibold text-red-600">
                     Recording... {recordingTime}s
                   </p>
                 )}
               </div>
-
+              {/* Means Recording is Not Stared */}
               {!recording && (
                 <button
                   onClick={startRecording}
@@ -139,7 +140,7 @@ function Record() {
                   Start Recording
                 </button>
               )}
-
+              {/* Means Recording is Stared , Now  We are able to Stop Recording */}
               {recording && (
                 <button
                   onClick={stopRecording}
@@ -148,7 +149,7 @@ function Record() {
                   Stop Recording
                 </button>
               )}
-
+              {/* Means Recording is Recorded , Now We able to play Voice */}
               {audioUrl && (
                 <div className="mt-6 text-center">
                   <p className="text-lg font-medium text-gray-700 mb-2">
@@ -159,6 +160,7 @@ function Record() {
               )}
             </div>
           </div>
+          {/* this Container for Save Voice in Database */}
           {audioUrl && (
             <div className="mt-2 bg-cyan-20">
               <React.Fragment>
