@@ -126,10 +126,7 @@ function SavedRecord() {
         <div className="py-6 px-4 bg-gray-100">
           <div className="flex flex-col sm:flex-row sm:space-x-6 sm:overflow-x-auto sm:min-w-max gap-4">
             {notes.map(({ _id, filename, title, createdAt }) => (
-              <div
-                key={_id}
-                className="bg-white rounded-lg shadow-md p-4 w-full sm:w-60 flex-shrink-0 relative"
-              >
+              <div data-aos="fade-up" data-aos-offset="200"  data-aos-delay="50" key={_id}  className="bg-white rounded-lg shadow-md p-4 w-full sm:w-60 flex-shrink-0 relative" >
                 <Tooltip title="Delete">
                   <IconButton
                     style={{
